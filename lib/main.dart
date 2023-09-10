@@ -5,6 +5,8 @@ import 'package:garage_app/src/app.dart';
 
 
 void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
 
   runApp(
