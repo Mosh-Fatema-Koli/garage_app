@@ -36,11 +36,12 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   get:
-  get_storage: ^2.0.3
+  get_storage:
   flutter_spinkit:
   google_fonts:
   easy_localization:
   gap:
+  floating_frosted_bottom_bar:
 
 
 

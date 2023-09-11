@@ -12,7 +12,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer:  Drawer(
-
         child: ListView(
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
@@ -65,11 +64,11 @@ class HomePage extends StatelessWidget {
 
 
               Positioned(
-                  top: 20,
+                  top: 10,
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(30),topRight: Radius.circular(30))
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(50))
                     ),
                 height: Get.height,
                 width: Get.width,
@@ -78,7 +77,7 @@ class HomePage extends StatelessWidget {
                       child: ListView(
                         children: [
                           SizedBox(
-                            height: 10,
+                            height: 20,
                           ),
                           SizedBox(
                               height: Get.height,

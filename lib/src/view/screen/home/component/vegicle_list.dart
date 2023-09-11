@@ -1,25 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:garage_app/src/view/screen/home/controller/sheet_controller.dart';
 import 'package:garage_app/src/view/screen/home/model/vehicle_list.dart';
-import 'package:garage_app/src/view/service/route/route.dart';
+import 'package:garage_app/src/view/widgets/colors.dart';
+import 'package:garage_app/src/view/widgets/k_text.dart';
 import 'package:get/get.dart';
 
 class VehicleListPage extends StatelessWidget {
-  const VehicleListPage({super.key});
+  VehicleListPage({super.key});
 
-  void _showBottomSheet(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        // Create the content for your bottom sheet here
-        return Container(
-          // Your bottom sheet content goes here
-          child: Center(
-            child: Text('This is the bottom sheet for index 1'),
-          ),
-        );
-      },
-    );
-  }
+  final BottomSheetController _bottomSheetController = Get.put(BottomSheetController());
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -34,27 +25,27 @@ class VehicleListPage extends StatelessWidget {
 
               if(index == 0){
 
-                _showBottomSheet(context);
+                _bottomSheetController.showBottomSheetCNG(context);
 
               }else if(index == 1){
-                _showBottomSheet(context);
+                _bottomSheetController.showBottomSheetAuto(context);
 
               }else if(index == 2){
-                _showBottomSheet(context);
+                _bottomSheetController.showBottomSheetAuto(context);
 
               }else if(index == 3){
-                _showBottomSheet(context);
+
               }else if(index == 4){
-                _showBottomSheet(context);
+
               }else if(index == 5){
-                _showBottomSheet(context);
+
               }else if(index == 6){
-                _showBottomSheet(context);
+
               }else if(index == 7) {
-                _showBottomSheet(context);
+
               }
               else{
-                _showBottomSheet(context);
+
 
               }
             },
