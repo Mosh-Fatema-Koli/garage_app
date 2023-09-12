@@ -21,23 +21,24 @@ class SettingsPages extends StatelessWidget {
         child: Column(
           children: [
             Gap(10),
-            Container(
-              height: 150,
-              width: Get.width,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CircleAvatar(
-                      radius: 50,
-                    ),
-                    Gap(10),
-                    KText(text: "Mr. XXX XX",fontSize: 16,color: BrandColors.colorButton,)
-                  ],
-                ),
-              ),
-            ),
+            // Container(
+            //   height: 130,
+            //   width: Get.width,
+            //   child: Padding(
+            //     padding: const EdgeInsets.symmetric(horizontal: 20),
+            //     child: Column(
+            //       crossAxisAlignment: CrossAxisAlignment.start,
+            //       children: [
+            //         CircleAvatar(
+            //           radius: 50,
+            //           backgroundImage: NetworkImage("https://as2.ftcdn.net/v2/jpg/02/29/75/83/1000_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"),
+            //         ),
+            //         Gap(10),
+            //
+            //       ],
+            //     ),
+            //   ),
+            // ),
             Card(
               child: ListTile(
                 title: KText(text: "প্রোফাইল",),

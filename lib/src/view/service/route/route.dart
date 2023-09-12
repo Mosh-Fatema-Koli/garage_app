@@ -44,7 +44,7 @@ List<GetPage> getPages = [
   GetPage(name: cngScreen, page: () => CNGMainPage()),
 
   GetPage(name: paymentScreen, page: () => PaymentPage()),
-  GetPage(name: settingsScreen, page: () => SettingsPages(),transition: Transition.leftToRight ,transitionDuration: Duration(seconds: 1)),
+  GetPage(name: settingsScreen, page: () => SettingsPages(),transition: Transition.leftToRight ,transitionDuration: Duration(milliseconds: 1)),
 
 
 
