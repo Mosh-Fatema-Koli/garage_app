@@ -11,7 +11,7 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   Future.delayed(Duration(seconds: 5), () => Get.toNamed(bottomBarScreen));
+   Future.delayed(Duration(seconds: 5), () => Get.offAllNamed(bottomBarScreen));
     return Scaffold(
       backgroundColor: Colors.white,
       body: Column(

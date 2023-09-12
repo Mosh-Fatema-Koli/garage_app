@@ -1,43 +1,23 @@
 
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:garage_app/src/view/screen/home/component/vegicle_list.dart';
 import 'package:garage_app/src/view/screen/localization.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
  HomePage({super.key});
-  final LanguageController languageController = Get.put(LanguageController());
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer:  Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ),
-              child: Text('Mr. XXXX'),
-            ),
-            ListTile(
-              title: const Text('Home'),
 
-            ),
-            ListTile(
-              title: const Text('Business'),
-
-            ),
-            ListTile(
-              title: const Text('School'),
-
-            ),
-          ],
-        ),
-      ),
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: (){},
+          icon: Icon(Icons.menu),
+        ),
          title: Center(child: Text("গ্যারেজ হালখাতা")),
         elevation: 0,
      backgroundColor: Colors.green,

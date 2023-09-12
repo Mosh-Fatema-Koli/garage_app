@@ -31,12 +31,12 @@ class VehicleListPage extends StatelessWidget {
                 _bottomSheetController.showBottomSheetAuto(context);
 
               }else if(index == 2){
-                _bottomSheetController.showBottomSheetAuto(context);
+                _bottomSheetController.showBottomSheetAutoRikshaw(context);
 
               }else if(index == 3){
-
+                _bottomSheetController.showBottomSheetRikshaw(context);
               }else if(index == 4){
-
+                _bottomSheetController.showBottomSheetRikshaw(context);
               }else if(index == 5){
 
               }else if(index == 6){
@@ -50,6 +50,9 @@ class VehicleListPage extends StatelessWidget {
               }
             },
             child: Card(
+           shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20.0),
+          ),
               elevation: 10,
                shadowColor: Colors.green,
                 child: Center(child: Padding(

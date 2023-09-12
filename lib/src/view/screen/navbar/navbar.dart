@@ -5,6 +5,7 @@ import 'package:garage_app/src/view/screen/history/history.dart';
 import 'package:garage_app/src/view/screen/home/home.dart';
 import 'package:garage_app/src/view/service/route/route.dart';
 import 'package:garage_app/src/view/widgets/colors.dart';
+import 'package:garage_app/src/view/widgets/k_text.dart';
 
 class navBarPage extends StatefulWidget {
   const navBarPage({Key? key,}) : super(key: key);
@@ -74,10 +75,10 @@ class _navBarPageState extends State<navBarPage>
 
           tabs: [
             TabsIcon(
-                icons: Icons.home,
+                title: "হোম",
                 color: currentPage == 0 ? colors[0] : Colors.white),
             TabsIcon(
-                icons: Icons.history,
+                title: "হিসাব",
                 color: currentPage == 1 ? colors[1] : Colors.white),
 
           ],
@@ -105,14 +106,14 @@ class TabsIcon extends StatelessWidget {
   final Color color;
   final double height;
   final double width;
-  final IconData icons;
+  final String title;
 
   const TabsIcon(
       {Key? key,
         this.color = Colors.green,
         this.height = 60,
         this.width = 50,
-        required this.icons})
+        required this.title})
       : super(key: key);
 
   @override
@@ -121,8 +122,8 @@ class TabsIcon extends StatelessWidget {
       height: height,
       width: width,
       child: Center(
-        child: Icon(
-          icons,
+        child: KText(
+         text: title,fontSize: 16,
           color: color,
         ),
       ),

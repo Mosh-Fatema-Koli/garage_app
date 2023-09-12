@@ -34,8 +34,6 @@ List<GetPage> getPages = [
 
   GetPage(name: splashScreen, page: (() => SplashPage()),),
   GetPage(name: introScreen, page: (() => IntroPage()), ),
-  // GetPage(name: loginScreen, page: () => LoginPage(), transition: Transition.fade,  ),
-  // GetPage(name: signupScreen, page: (() => RegistrationPage()), transition: Transition.fade,),
   GetPage(name: bottomBarScreen, page: () => navBarPage()),
   GetPage(name: homeScreen, page: () => HomePage(),),
   GetPage(name: cngScreen, page: () => CNGMainPage()),

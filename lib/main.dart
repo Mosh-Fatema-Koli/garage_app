@@ -7,15 +7,9 @@ import 'package:garage_app/src/app.dart';
 void main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
-  await EasyLocalization.ensureInitialized();
+
 
   runApp(
-    EasyLocalization(
-     // supportedLocales: [Locale('en', 'US'), Locale('bn', 'BD')],
-      supportedLocales: [Locale('bn', 'BD')],
-      path: 'assets/translations', // Path to your translation files
-      fallbackLocale: Locale('bn', 'BD'), // Fallback locale
-      child: MyApp(),
-    ),
+    MyApp(),
   );
 }

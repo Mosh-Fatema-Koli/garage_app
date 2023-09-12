@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:garage_app/src/view/widgets/button.dart';
@@ -6,8 +5,8 @@ import 'package:garage_app/src/view/widgets/colors.dart';
 import 'package:garage_app/src/view/widgets/k_text.dart';
 import 'package:garage_app/src/view/widgets/text_box_field.dart';
 
-class CNGMainPage extends StatelessWidget {
-  const CNGMainPage({super.key});
+class ChargeMainPage extends StatelessWidget {
+  const ChargeMainPage({super.key});
 
   @override
   Widget build(BuildContext context) {

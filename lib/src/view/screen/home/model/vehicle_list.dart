@@ -18,6 +18,7 @@ List<VehicleModel> vehicleList=
   VehicleModel(name: "অটো", image:"assets/images/auto.png"),
   VehicleModel(name: "অটো রিকশা", image:"assets/images/auto_riksha.jpg"),
   VehicleModel(name: "রিকশা", image:"assets/images/rikshaw.png"),
+  VehicleModel(name: "ভ্যান", image:"assets/images/van.png"),
   VehicleModel(name: "কভার ভ্যান", image:"assets/images/covervan.png"),
   VehicleModel(name: "ট্রাক", image:"assets/images/truck_container.png"),
   VehicleModel(name: "বাস", image:"assets/images/bus.png"),
