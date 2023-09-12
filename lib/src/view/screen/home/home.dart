@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:garage_app/src/view/screen/home/component/vegicle_list.dart';
 import 'package:garage_app/src/view/screen/localization.dart';
+import 'package:garage_app/src/view/service/route/route.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,7 +16,10 @@ class HomePage extends StatelessWidget {
 
       appBar: AppBar(
         leading: IconButton(
-          onPressed: (){},
+          onPressed: (){
+
+            Get.toNamed(settingsScreen);
+          },
           icon: Icon(Icons.menu),
         ),
          title: Center(child: Text("গ্যারেজ হালখাতা")),

@@ -1,6 +1,8 @@
 import 'package:garage_app/src/view/screen/home/home.dart';
 import 'package:garage_app/src/view/screen/intro/into.dart';
 import 'package:garage_app/src/view/screen/navbar/navbar.dart';
+import 'package:garage_app/src/view/screen/payment/payment.dart';
+import 'package:garage_app/src/view/screen/settings/settings.dart';
 import 'package:garage_app/src/view/screen/splash/splash.dart';
 import 'package:garage_app/src/view/screen/vehicle/cng/cng_main.dart';
 import 'package:get/get.dart';
@@ -26,6 +28,8 @@ const String coverVanScreen = "/cover_van_screen";
 const String truckScreen = "/truc_screen";
 const String carScreen = "/car_screen";
 
+const String paymentScreen = "/payments_screen";
+const String settingsScreen = "/settings_screen";
 
 
 
@@ -35,8 +39,12 @@ List<GetPage> getPages = [
   GetPage(name: splashScreen, page: (() => SplashPage()),),
   GetPage(name: introScreen, page: (() => IntroPage()), ),
   GetPage(name: bottomBarScreen, page: () => navBarPage()),
+
   GetPage(name: homeScreen, page: () => HomePage(),),
   GetPage(name: cngScreen, page: () => CNGMainPage()),
+
+  GetPage(name: paymentScreen, page: () => PaymentPage()),
+  GetPage(name: settingsScreen, page: () => SettingsPages(),transition: Transition.leftToRight ,transitionDuration: Duration(seconds: 1)),
 
 
 

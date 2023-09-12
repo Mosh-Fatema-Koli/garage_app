@@ -302,71 +302,59 @@ class _TextboxWidgetState extends State<TextboxWidget> {
 }
 
 
-class DatetimeBox extends StatefulWidget {
+//Radio****************************
+
+enum SingingCharacter { lafayette, jefferson }
+
+class RadioCustom extends StatefulWidget {
+  const RadioCustom({super.key});
+
   @override
-  _DatetimeBoxState createState() => _DatetimeBoxState();
+  State<RadioCustom> createState() => _RadioCustomState();
 }
 
-class _DatetimeBoxState extends State<DatetimeBox> {
-  DateTime selectedDate = DateTime.now();
-  TimeOfDay selectedTime = TimeOfDay.now();
-
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: selectedDate,
-      firstDate: DateTime(2000),
-      lastDate: DateTime(2101),
-    );
-    if (picked != null && picked != selectedDate)
-      setState(() {
-        selectedDate = picked;
-      });
-  }
-
-  Future<void> _selectTime(BuildContext context) async {
-    final TimeOfDay? picked = await showTimePicker(
-      context: context,
-      initialTime: selectedTime,
-    );
-    if (picked != null && picked != selectedTime)
-      setState(() {
-        selectedTime = picked;
-      });
-  }
+class _RadioCustomState extends State<RadioCustom> {
+  SingingCharacter? _character = SingingCharacter.lafayette;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Date and Time Text Field'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            TextFormField(
-              onTap: () {
-                _selectDate(context);
-              },
-              readOnly: true,
-              controller: TextEditingController(
-                text: "${selectedDate.toLocal()}".split(' ')[0],
-              ),
-            ),
-            SizedBox(height: 20.0),
-            TextFormField(
-              onTap: () {
-                _selectTime(context);
-              },
-              readOnly: true,
-              controller: TextEditingController(
-                text: "${selectedTime.format(context)}",
-              ),
-            ),
-          ],
+    return Column(
+      children: <Widget>[
+        ListTile(
+          title: const Text('নগদ'),
+          leading: Radio<SingingCharacter>(
+            value: SingingCharacter.lafayette,
+            groupValue: _character,
+            activeColor: BrandColors.colorButton,
+            onChanged: (SingingCharacter? value) {
+              setState(() {
+                _character = value;
+              });
+            },
+          ),
         ),
-      ),
+        ListTile(
+          title: const Text('বিকাশ'),
+          leading: Radio<SingingCharacter>(
+            value: SingingCharacter.jefferson,
+            groupValue: _character,
+            activeColor: BrandColors.colorButton,
+            onChanged: (SingingCharacter? value) {
+              setState(() {
+
+                _character = value;
+              });
+            },
+          ),
+        ),
+      ],
     );
   }
 }
+
+
+//date****************************
+
+
+
+//Multiselect****************************

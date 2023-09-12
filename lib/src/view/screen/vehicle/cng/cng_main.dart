@@ -1,10 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:garage_app/src/view/screen/payment/payment.dart';
 import 'package:garage_app/src/view/widgets/button.dart';
 import 'package:garage_app/src/view/widgets/colors.dart';
 import 'package:garage_app/src/view/widgets/k_text.dart';
 import 'package:garage_app/src/view/widgets/text_box_field.dart';
+import 'package:get/get.dart';
 
 class CNGMainPage extends StatelessWidget {
   const CNGMainPage({super.key});
@@ -52,8 +54,12 @@ class CNGMainPage extends StatelessWidget {
               KText(text: "ভাড়া শেষ করার সময় : "),
               CustomTextField(),
               Gap(20),
-              GlobalButtons.buttonWidget(text: "চালিয়ে যান",color: BrandColors.colorButton,textColor: BrandColors.colorWhite)
-
+              GlobalButtons.buttonWidget(text: "চালিয়ে যান",color: BrandColors.colorButton,textColor: BrandColors.colorWhite,
+              press: (){
+                Get.to(PaymentPage());
+              }
+              ),
+              Gap(20),
 
             ],
           ),

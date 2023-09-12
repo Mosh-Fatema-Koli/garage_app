@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:garage_app/src/view/screen/history/onemonth.dart';
+import 'package:garage_app/src/view/screen/history/todays.dart';
 import 'package:garage_app/src/view/widgets/colors.dart';
 import 'package:garage_app/src/view/widgets/k_text.dart';
 import 'package:get/get.dart';
@@ -35,36 +37,8 @@ class HistoryPage extends StatelessWidget {
            },
            body: TabBarView(
              children: <Widget>[
-              ListView.builder(
-                itemCount: 10,
-                itemBuilder: (context, index) => ListTile(
-
-                  title: Row(
-                    children: [
-                      KText(text: "রিকশা",),
-                      Gap(30),
-                      KText(text: "অর্ধেক দিনের ভাড়া",),
-                      Gap(30),
-                      KText(text: "নগদ",),
-                    ],
-                  ),
-                  trailing: KText(text: "৳ 70",),
-                ),),
-               ListView.builder(
-                 itemCount: 10,
-                 itemBuilder: (context, index) => ListTile(
-
-                   title: Row(
-                     children: [
-                       KText(text: "রিকশা",),
-                       Gap(30),
-                       KText(text: "অর্ধেক দিনের ভাড়া",),
-                       Gap(30),
-                       KText(text: "নগদ",),
-                     ],
-                   ),
-                   trailing: KText(text: "৳ 70",),
-                 ),),
+               TodaysReportPage(),
+               OnemonthReportPage()
              ],
            ),
          )),
